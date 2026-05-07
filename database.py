@@ -1,11 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
-import os
 
-DATABASE_URL = os.getenv("DATABASE_URL")
-
-if not DATABASE_URL:
-    raise ValueError("DATABASE_URL is missing")
+DATABASE_URL = "mysql+pymysql://root:7532053343@localhost:3306/geduu"
 
 engine = create_engine(DATABASE_URL)
 
